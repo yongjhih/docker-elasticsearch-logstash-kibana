@@ -2,6 +2,7 @@ logstash:
   image: logstash
   links:
    - redis
+   - elasticsearch
   volumes:
    - $PWD:/config-dir
   command: logstash -f /config-dir/logstash.conf
@@ -30,3 +31,16 @@ webdis:
 
 redis:
   image: redis
+
+#kafka:
+#  image: wurstmeister/kafka
+
+elasticsearch:
+  image: elasticsearch
+
+kibana:
+  image: kibana
+  links:
+   - elasticsearch
+  ports:
+   - '5601:5601'
