@@ -4,7 +4,7 @@ logstash:
    - redis
   volumes:
    - $PWD:/config-dir
-  command: logstash -f /config-dir/logstash.conf 2> /config-dir/logstash.err > /config-dir/logstash.log
+  command: logstash -f /config-dir/logstash.conf
 
 webdis:
   image: anapsix/webdis

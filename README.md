@@ -4,12 +4,13 @@
 
 ```sh
 wget https://github.com/yongjhih/docker-logstash-webdis/raw/master/docker-compose.yml
+chown :docker .
 docker-compose up
 ```
 
 * host:webdis:7379
 * guest:redis:6379
-* logstash.out, logstash.log, logstash.err
+* logstash.out
 
 ## Configuration
 
@@ -37,5 +38,5 @@ volumes:
 ## Testing
 
 ```sh
-curl http://127.0.0.1:7379/SET/hello/world
+curl 'http://127.0.0.1:7379/LPUSH/logstash/\{"hello":"world"\}'
 ```
