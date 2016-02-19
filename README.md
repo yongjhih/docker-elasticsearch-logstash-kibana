@@ -9,8 +9,8 @@ docker-compose up
 ```
 
 * host:webdis:7379
-* guest:redis:6379
 * logstash.out
+* host:kibana:5601
 
 ## Configuration
 
