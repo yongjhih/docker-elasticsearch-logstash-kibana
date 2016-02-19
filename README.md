@@ -32,7 +32,7 @@ environment:
 
 volumes:
 
-- '$PWD/webdis.log:/webdis.log'
+- $PWD/webdis.log:/webdis.log
 
 ## Testing
 
