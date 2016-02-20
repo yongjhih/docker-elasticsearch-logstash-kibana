@@ -5,6 +5,7 @@ logstash:
    - elasticsearch
   volumes:
    - $PWD:/config-dir
+   #- $PWD/logstash.conf:/config-dir/logstash.conf
   command: logstash -f /config-dir/logstash.conf
 
 webdis:
@@ -26,8 +27,8 @@ webdis:
     REDIS_HOST: $REDIS_HOST
     REDIS_PORT: $REDIS_PORT
     REDIS_AUTH: $REDIS_AUTH
-   #volumes:
-   # - $PWD/webdis.log:/webdis.log
+  #volumes:
+  # - $PWD/webdis.log:/webdis.log
 
 redis:
   image: redis
