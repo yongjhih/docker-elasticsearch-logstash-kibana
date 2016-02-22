@@ -1,18 +1,16 @@
-# docker-logstash-webdis
+# docker-elasticsearch-logstash-kibana
 
-[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/?repo=https://github.com/yongjhih/docker-logstash-webdis)
-[![Deploy to Docker Cloud](https://github.com/yongjhih/docker-parse-server/raw/master/art/deploy-to-docker-cloud.png)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/yongjhih/docker-logstash-webdis)
+[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/?repo=https://github.com/yongjhih/docker-elasticsearch-logstash-kibana)
+[![Deploy to Docker Cloud](https://github.com/yongjhih/docker-parse-server/raw/master/art/deploy-to-docker-cloud.png)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/yongjhih/docker-elasticsearch-logstash-kibana)
 
 ## Usage
 
 ```sh
-wget https://github.com/yongjhih/docker-logstash-webdis/raw/master/docker-compose.yml
-chown :docker .
+wget https://github.com/yongjhih/docker-elasticsearch-logstash-kibana/raw/master/docker-compose.yml
 docker-compose up
 ```
 
 * host:webdis:7379
-* logstash.out
 * host:kibana:5601
 
 ## Configuration
@@ -33,10 +31,6 @@ environment:
 - REDIS_HOST
 - REDIS_PORT
 - REDIS_AUTH
-
-volumes:
-
-- $PWD/webdis.log:/webdis.log
 
 ## Testing
 
